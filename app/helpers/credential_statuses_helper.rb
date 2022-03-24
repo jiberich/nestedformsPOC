@@ -1,0 +1,2 @@
+module CredentialStatusesHelper
+end

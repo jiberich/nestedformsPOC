@@ -1,0 +1,27 @@
+<%= form_with(model: credential_status) do |form| %>
+  <% if credential_status.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(credential_status.errors.count, "error") %> prohibited this credential_status from being saved:</h2>
+
+      <ul>
+        <% credential_status.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :credential_id, style: "display: block" %>
+    <%= form.text_field :credential_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

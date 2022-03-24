@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Credential statuses</h1>
+
+<div id="credential_statuses">
+  <% @credential_statuses.each do |credential_status| %>
+    <%= render credential_status %>
+    <p>
+      <%= link_to "Show this credential status", credential_status %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New credential status", new_credential_status_path %>

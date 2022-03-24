@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @credential_status %>
+
+<div>
+  <%= link_to "Edit this credential status", edit_credential_status_path(@credential_status) %> |
+  <%= link_to "Back to credential statuses", credential_statuses_path %>
+
+  <%= button_to "Destroy this credential status", @credential_status, method: :delete %>
+</div>
